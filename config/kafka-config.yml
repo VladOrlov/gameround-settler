@@ -1,0 +1,12 @@
+default: &default
+  bootstrapServers: "localhost:9092"
+  offsetReset: "latest"
+  enableAutoCommit: false
+  consumerGroup: "game-round-settler-1"
+  topics:
+    source: "final-wallet-transactions"
+    destination: "loss-check-events"
+
+development:
+  <<: *default
+  offsetReset: "earliest"

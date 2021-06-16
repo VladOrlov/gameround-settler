@@ -1,0 +1,10 @@
+default: &default
+  host: "cassandra-31f30aa8-betssongroup-9e86.aivencloud.com:28572"
+  keyspace: "wallet"
+  transactionTable: "transactions"
+  gameRoundResultTable: "game_round_results"
+  bigLossEventTable: "big_loss_events"
+
+development:
+  <<: *default
+  host: "localhost:9042"

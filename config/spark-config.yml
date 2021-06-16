@@ -1,0 +1,8 @@
+default: &default
+  applicationName: "game-round-settler"
+  batchDuration: 10
+  partitionsNumber: 32
+
+development:
+  <<: *default
+  partitionsNumber: 8
